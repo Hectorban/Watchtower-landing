@@ -1,0 +1,64 @@
+#nav {
+  font-size: 80%; 
+  padding: 1rem;
+}
+
+#nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#name {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.link {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+#nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--lblue)
+}
+
+#nav [class*="fa-"]:hover,
+.link:hover {
+  color: var(--red)
+}
+
+#nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--lblue)
+}
+
+.button {
+  color: var(--white);
+  background-color: var(--red);
+  padding: 0.3rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--dred);
+}
+@media (min-width: 850px){
+  #nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #name {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,41 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --red: #BC3908;
+    --dred: #621708;
+    --white: #EDF2F4;
+    --cyan: #F6AA1C;
+    --lblue: #621708;
+    --dblue: #220901;
+    --font-size: 1.3rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--dblue);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--cyan);
+}
+
+a:hover {
+  color: var(--lblue);
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

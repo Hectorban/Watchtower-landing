@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  padding: 4rem 0 0 0;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem; 
+}
+
+.footer [class*="fa-"] {
+  font-size: 150%;
+  color: var(--lblue)
+}
+
+.footer [class*="fa-"]:hover {
+  color: var(--red)
+}
+
+#copyright {
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}

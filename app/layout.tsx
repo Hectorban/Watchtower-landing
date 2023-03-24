@@ -1,4 +1,11 @@
-import './globals.css'
+import '../styles/global.css'
+import { main_font } from '@/lib/fonts'
+import Navbar from "@/components/Navbar"
+import Footer from '@/components/Footer'
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,8 +18,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="es" className={main_font.className}>
+      <body>
+        <Navbar/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   )
 }
