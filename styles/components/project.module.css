@@ -1,0 +1,16 @@
+.blackbox {
+  background-color: var(--dblue);
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 550px) {
+  .text {
+    order: 2;
+    grid-column: 3/11;
+    grid-row: 1/2;
+    text-align: right;
+  }
+}

@@ -1,5 +1,11 @@
+import ContactForm from "@/components/ContactForm"
+import styles from "@/styles/pages/contact.module.css"
+
 export default async function contact() {
   return (
-    <h1>This page is in construction</h1>
+    <section className={styles.form}>
+      <h1>Contactanos!</h1>
+      <ContactForm />
+    </section>
   )
 }

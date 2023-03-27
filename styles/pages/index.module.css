@@ -41,13 +41,6 @@
   border-radius: 25px;
   padding: 1rem;
 }
-.blackbox {
-  background-color: var(--dblue);
-  padding: 1rem;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
 
 @media (min-width: 550px) {
   #projects article {

@@ -1,5 +1,10 @@
+import styles from '@/styles/pages/about.module.css'
+
 export default function about() {
   return (
-    <h1>This page is in construction</h1>
+    <section className={styles.about}>
+      <h1>Acerca de nosotros</h1>
+      <p> Texto acerca de nosotros </p>
+    </section>
   )
 }

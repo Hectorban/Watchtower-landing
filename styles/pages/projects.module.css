@@ -1,0 +1,42 @@
+#sectionlblue {
+  background-color: var(--lblue);
+}
+
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+  color: var(--cyan);
+}
+#projects h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--dblue);
+  border-top: 1px solid var(--dblue);
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+@media (min-width: 550px) {
+  #projects article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  #projects {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  #projects img {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+}

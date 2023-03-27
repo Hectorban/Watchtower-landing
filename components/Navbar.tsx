@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from './navbar.module.css'
+import styles from "@/styles/components/navbar.module.css"
 import { secondary_font, main_font } from "@/lib/fonts"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"

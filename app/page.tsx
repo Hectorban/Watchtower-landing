@@ -1,7 +1,7 @@
 import Link from "next/link"
-import Image from "next/image"
-import styles from "./index.module.css"
+import styles from "@/styles/pages/index.module.css"
 import { main_font, secondary_font } from "@/lib/fonts"
+import Project from "@/components/Project"
 
 export default async function Home() {
   return (
@@ -16,20 +16,14 @@ export default async function Home() {
       <div id={styles.sectionlblue}>
         <section id={styles.projects}>
           <h2>Nuestros proyectos</h2>
-          <article>
-            <div className={styles.text}>
-              <h4>Nuestro ultimo proyecto</h4>
-              <h3>Torneo Nacional de Free Fire, Aguascalientes</h3>
-              <p className={styles.blackbox}>El objetivo de este torneo es fomentar la cultura gamer y el deporte electrónico en México, brindando a los jugadores locales la oportunidad de demostrar sus habilidades y competir en un ambiente amistoso, emocionante y competitivo. Además, el torneo busca promover la inclusión y diversidad en la comunidad gamer, permitiendo a jugadores de diferentes edades, géneros y habilidades participar en igualdad de condiciones. Asimismo, se busca fortalecer la comunidad gamer en Aguascalientes y establecer una competición de referencia en la región, que permita a los participantes mejorar sus habilidades y aprender de otros jugadores.</p>
-            </div>
-            <Image
-              src="/Torneofreefire.jpeg"
-              alt="Rocket League: Fire and ice"
-              width={540}
-              height={540}
-              priority
-            />
-          </article>
+          <Project
+            title="Torneo Nacional de Free Fire, Aguascalientes"
+            description="El objetivo de este torneo es fomentar la cultura gamer y el deporte electrónico en México, brindando a los jugadores locales la oportunidad de demostrar sus habilidades y competir en un ambiente amistoso, emocionante y competitivo. Además, el torneo busca promover la inclusión y diversidad en la comunidad gamer, permitiendo a jugadores de diferentes edades, géneros y habilidades participar en igualdad de condiciones. Asimismo, se busca fortalecer la comunidad gamer en Aguascalientes y establecer una competición de referencia en la región, que permita a los participantes mejorar sus habilidades y aprender de otros jugadores."
+            imageSrc="/Torneofreefire.jpeg"
+            imageAlt="Rocket League: Fire and ice"
+            imageWidth={540}
+            imageHeight={540}
+          />
         </section>
       </div>
       <div className={styles.gradient}></div>
