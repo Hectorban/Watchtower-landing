@@ -2,6 +2,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import styles from "@/styles/components/contactForm.module.css"
+import { toast } from 'react-toastify';
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string().required('El nombre es requerido'),
@@ -10,6 +11,7 @@ const ContactSchema = Yup.object().shape({
 });
 
 export default function ContactForm() {
+  const notify = () => toast.success("Enviado!", {theme: "dark"});
   return (
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
@@ -27,9 +29,12 @@ export default function ContactForm() {
           if (response.ok) {
             const data = await response.json();
             console.log('Form submitted successfully:', data);
+            notify()
             resetForm();
           } else {
             console.error('Error submitting form:', response.statusText);
+            notify()
+            resetForm();
           }
         } catch (error) {
           console.error('Error submitting form:', error);

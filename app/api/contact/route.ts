@@ -17,5 +17,5 @@ async function add_to_notion(email: any, name: any, message: any) {
 export async function POST(req: Request) {
   const { email, name, message } = await req.json();
   await add_to_notion(email, name, message);
-  NextResponse.json({ message: "Form submitted successfully" });
+  return NextResponse.json({ message: "Form submitted successfully" });
 }
