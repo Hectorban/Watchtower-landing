@@ -1,0 +1,78 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--lblue);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form div {
+  text-align: left;
+}
+
+.label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.field {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--cyan);
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #0070f3;
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+.errorMessageTextArea {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  height: 300px;
+}
+.textArea textarea {
+  height: 100%;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--cyan);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--red);
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
