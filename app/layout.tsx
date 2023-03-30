@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import "prismjs/themes/prism-tomorrow.css";
 import { main_font } from '@/lib/fonts'
 import Navbar from "@/components/Navbar"
 import Footer from '@/components/Footer'

@@ -3,3 +3,34 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.blogContainer {
+  background-color: var(--dred);
+  border-radius: 25px;
+  margin: 2rem 0 2rem 0;
+}
+
+.blogPost {
+  padding: 1.3rem 2rem 0.5rem 2rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.blogPost a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.blogPost a:hover {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
