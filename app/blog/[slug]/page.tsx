@@ -1,17 +1,26 @@
 import styles from '@/styles/pages/blogSlug.module.css'
-import { fetchPageById } from "@/lib/notion"
+import { getBlocksOfPageById } from "@/lib/notion"
 import CodeSnippet from '@/components/CodeSnippet'
+import { PartialBlockObjectResponse, BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints'
 
-export default async function blogPost({params}) {
+interface BlogPostProps {
+  params: ParamsProps
+}
+
+interface ParamsProps {
+  slug: string
+}
+
+export default async function blogPost({params}: BlogPostProps) {
   const {slug} = params
-  const page = await fetchPageById(slug)
+  const blocks = await getBlocksOfPageById(slug)
   return(
     <section className={styles.blogPost}>
-      {page.results.map((block, index) => {
+      {blocks.map((block, index) => {
         const {type} = block
         if(type === "heading_1"){
           return (
-            <h1 key={index}>{block.heading_1.rich_text[0].plain_text}</h1>
+            <h1 key={index}>{block.heading_1?.rich_text[0].plain_text}</h1>
           )
         }
         if(type === "paragraph") {

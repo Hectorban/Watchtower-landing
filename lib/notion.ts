@@ -1,18 +1,23 @@
 import { Client } from '@notionhq/client'
+import type { Block, Page } from 'notion-api-types/responses'
 
-const notion = new Client({ auth: process.env.NOTION_SECRET });
+const notion_client = new Client({ auth: process.env.NOTION_SECRET });
 
-export async function fetchPageById(pageId) {
-  const response = await notion.blocks.children.list({
+export async function getBlocksOfPageById(pageId: string) {
+  const response = await notion_client.blocks.children.list({
     block_id: pageId,
     page_size: 50,
   });
-  return response
+  const result = response.results
+  return result
 }
 
 export async function getBlogsData() {
   const blogs_database_id = process.env.BLOGS_DATABASE_ID;
-  const response = await notion.databases.query({
+  if(!blogs_database_id) {
+    throw new Error('You need to setup BLOGS_DATABASE_ID ENV VAR');
+  }
+  const response = await notion_client.databases.query({
     database_id: blogs_database_id,
     sorts: [{
       property: "Created time",
@@ -31,6 +36,4 @@ export async function getBlogsData() {
     return obj
   })
 }
-
-
 

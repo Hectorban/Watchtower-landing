@@ -29,5 +29,9 @@
     "react-toastify": "^9.1.2",
     "typescript": "5.0.2",
     "yup": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0",
+    "notion-api-types": "^1.0.0"
   }
 }

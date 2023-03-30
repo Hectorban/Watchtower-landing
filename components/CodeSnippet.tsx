@@ -1,8 +1,12 @@
 'use client'
 import Prism from "prismjs";
 import { useEffect } from "react";
+interface CodeSnippetProps {
+  language: string;
+  code: string;
+}
 
-export default function CodeSnippet({language, code}) {
+export default function CodeSnippet({language, code}: CodeSnippetProps) {
   useEffect(() => {
     const highlight = async () => {
       await Prism.highlightAll(); // <--- prepare Prism 
